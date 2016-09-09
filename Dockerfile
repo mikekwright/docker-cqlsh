@@ -6,7 +6,7 @@ RUN apt update && \
     apt clean && \
     rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/*
 
-ENV CQLSH_VERSION 5.0.3
-RUN pip install cqlsh==5.0.3
+ENV CQLSH_VERSION 4.1.1
+RUN pip install cqlsh==$CQLSH_VERSION
 
 ENTRYPOINT ["cqlsh"]
